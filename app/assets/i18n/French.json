@@ -1,0 +1,32 @@
+{
+  "Welcome":{
+    "Title":"Bienvenue",
+    "Developer":"Développé par:"
+  },
+  "App":{
+    "Home":"maison",
+    "List":"Liste des employés"
+  },
+  "EmployeeList":{
+    "Title":"Liste des employés",
+    "FirstName":"Prénom",
+    "LastName":"Nom de famille",
+    "Birthdate":"Date de naissance",
+    "JobPosition":"Poste",
+    "Department":"département",
+    "Operations":"Opérations"
+  },
+  "EmployeeDetails":{
+    "Title":"Détails de l'employé",
+    "Back":"arrière"
+  },
+  "EmployeeEdit":{
+    "Save":"enregistrer",
+    "Cancel":"Annuler",
+    "FirstNamePlaceHolder":"Ton prénom",
+    "LastNamePlaceHolder":"Votre nom de famille",
+    "BirthdatePlaceHolder": "Ta date de naissance",
+    "JobPositionPlaceHolder": "Votre poste d'emploi",
+    "DepartmentPlaceHolder": "Votre département"
+  }
+}

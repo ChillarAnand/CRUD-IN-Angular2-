@@ -1,0 +1,23 @@
+<nav class='navbar navbar-default'>
+    <div class='container-fluid'>
+        <ul class='nav navbar-nav'>
+            <li><a [routerLink]="['/welcome']">{{'App.Home'|translate}}</a></li>
+            <li><a [routerLink]="['/employees']">{{'App.List'|translate}}</a></li>
+            <li><a [routerLink]="['/employees',0,'edit']">Add New Employee</a></li>
+        </ul>
+        <ul class='nav navbar-nav navbar-right'>
+            <li>
+                <select style="margin-top: 6px" class="form-control btn btn-default dropdown-toggle" #langSelect (change)="translate.use(langSelect.value)">
+                        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                    </select>
+            </li>
+            <li>
+                <a [routerLink]="['/login']">Log In</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<div class='container'>
+    <router-outlet></router-outlet>
+</div>

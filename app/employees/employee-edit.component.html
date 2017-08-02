@@ -1,0 +1,77 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{PageTitle}}
+    </div>
+    <div class='panel-body'>
+        <form  novalidate (ngSubmit)="saveEmployee()" [formGroup]="user">
+            <div class="row form-group input-field">
+                <div class="col-md-3">
+                    <label>{{'EmployeeList.FirstName'|translate}}</label>
+                </div>
+                <div class="col-md-5">
+                    <input type="text" placeholder="{{'EmployeeEdit.FirstNamePlaceHolder'|translate}}" class="form-control" formControlName="FirstName">
+
+                    <div class="error" style="color: red;" *ngIf="user.get('FirstName').touched && user.get('FirstName').hasError('required')">
+                        First name is required
+                    </div>
+                    <div class="error" style="color: red;" *ngIf="user.get('FirstName').touched && user.get('FirstName').hasError('minlength')">
+                        Minimum of 2 characters
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group input-field">
+                <div class="col-md-3">
+                    <label>{{'EmployeeList.LastName'|translate}}</label>
+                </div>
+                <div class="col-md-5">
+                    <input type="text" placeholder="{{'EmployeeEdit.LastNamePlaceHolder'|translate}}" class="form-control" formControlName="LastName">
+                    <div class="error" style="color: red;" *ngIf="user.get('LastName').touched && user.get('LastName').hasError('required') ">
+                        Last Name is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group input-field">
+                <div class="col-md-3">
+                    <label>{{'EmployeeList.Birthdate'|translate}}</label>
+                </div>
+                <div class="col-md-5">
+                    <input type="date" placeholder="{{'EmployeeEdit.BirthdatePlaceHolder'|translate}}" class="form-control" formControlName="Birthdate">
+                    <div class="error" style="color: red;" *ngIf="user.get('Birthdate').touched && user.get('Birthdate').hasError('required')">
+                        Birth Date is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group input-field">
+                <div class="col-md-3">
+                    <label>{{'EmployeeList.Department'|translate}}</label>
+                </div>
+                <div class="col-md-5">
+                    <input type="text" placeholder="{{'EmployeeEdit.DepartmentPlaceHolder'|translate}}" class="form-control" formControlName="Department">
+                    <div class="error" style="color: red;" *ngIf="user.get('Department').touched && user.get('Department').hasError('required')">
+                        Department is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group input-field">
+                <div class="col-md-3">
+                    <label>{{'EmployeeList.JobPosition'|translate}}</label>
+                </div>
+                <div class="col-md-5">
+                    <input type="text" placeholder="{{'EmployeeEdit.JobPositionPlaceHolder'|translate}}" class="form-control" formControlName="JobPosition">
+                    <div class="error" style="color: red;" *ngIf="user.get('JobPosition').touched && user.get('JobPosition').hasError('required')">
+                        Job Position is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-md-offset-3">
+                <button type="submit" class="btn btn-default" [disabled]="user.invalid">{{'EmployeeEdit.Save'|translate}}</button>
+                <button class="btn btn-default" [routerLink]="['/employees']"  [preserveQueryParams]="true" >{{'EmployeeEdit.Cancel'|translate}}</button>
+            </div>
+        </form>
+    </div>
+</div>

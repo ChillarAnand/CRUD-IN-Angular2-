@@ -1,0 +1,41 @@
+<div class='panel panel-primary' *ngIf='employee'>
+    <div class='panel-heading'>
+        {{'EmployeeDetails.Title'|translate}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-2'>{{'EmployeeList.FirstName'|translate}}:</div>
+            <div class='col-md-3'>{{employee.FirstName}}</div>
+        </div>
+
+        <div class='row'>
+            <div class='col-md-2'>{{'EmployeeList.LastName'|translate}}:</div>
+            <div class='col-md-3'>{{employee.LastName}}</div>
+        </div>
+
+        <div class='row'>
+            <div class='col-md-2'>{{'EmployeeList.Birthdate'|translate}}:</div>
+            <div class='col-md-3'>{{employee.Birthdate|date}}</div>
+        </div>
+
+        <div class='row'>
+            <div class='col-md-2'>{{'EmployeeList.Department'|translate}}:</div>
+            <div class='col-md-3'>{{employee.Department}}</div>
+        </div>
+
+        <div class='row'>
+            <div class='col-md-2'>{{'EmployeeList.JobPosition'|translate}}:</div>
+            <div class='col-md-3'>{{employee.JobPosition}}</div>
+        </div>
+
+    </div>
+
+    <div class='panel-footer'>
+        <a class='btn btn-default' [routerLink]="['/employees']" [preserveQueryParams]="true" style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> {{'EmployeeDetails.Back'|translate}}
+        </a>
+        <a class='btn btn-default' [routerLink]="['/employees',employee.Id,'edit']" [preserveQueryParams]="true">Edit</a>
+    </div>
+
+</div>

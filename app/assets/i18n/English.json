@@ -1,0 +1,32 @@
+{
+  "Welcome": {
+    "Title": "Welcome",
+    "Developer": "Developed by:"
+  },
+  "App": {
+    "Home": "Home",
+    "List": "Employee List"
+  },
+  "EmployeeList": {
+    "Title": "Employee List",
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "Birthdate": "Birth date",
+    "JobPosition": "Job Position",
+    "Department": "Department",
+    "Operations": "Operations"
+  },
+  "EmployeeDetails": {
+    "Title": "Employee Details",
+    "Back":"Back"
+  },
+  "EmployeeEdit":{
+    "Save":"Save",
+    "Cancel":"Cancel",
+    "FirstNamePlaceHolder":"Your first name",
+    "LastNamePlaceHolder":"Your last name",
+    "BirthdatePlaceHolder": "Your birth date",
+    "JobPositionPlaceHolder": "Your Job Position",
+    "DepartmentPlaceHolder": "Your Department"
+  }
+}

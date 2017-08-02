@@ -1,0 +1,61 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{'EmployeeList.Title'|translate}}
+    </div>
+    <div class='panel-body'>
+        <div class="row">
+            <div class="col-md-2">Filter by:</div>
+            <div class="col-md-4">
+                <input type="text" [(ngModel)]="listFilter" />
+            </div>
+        </div>
+        <div class="row" *ngIf="listFilter">
+            <div class="col-md-6">
+                <h3>Filtered by: {{listFilter}} </h3>
+            </div>
+        </div>
+        <div class='table-responsive'>
+            <table class='table' *ngIf='employees'>
+                <thead>
+                    <tr>
+                        <th>{{'EmployeeList.FirstName'|translate}}</th>
+                        <th>{{'EmployeeList.LastName'|translate}}</th>
+                        <th>{{'EmployeeList.Birthdate'|translate}}</th>
+                        <th>{{'EmployeeList.JobPosition'|translate}}</th>
+                        <th>{{'EmployeeList.Department'|translate}}</th>
+                        <th>{{'EmployeeList.Operations'|translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let employee of employees|employeeFilter:listFilter'>
+                        <td><a [routerLink]="['/employees',employee.Id]" 
+                        [queryParams]="{filterby:listFilter}">                                
+                            {{ employee.FirstName}}
+                            </a>
+                        </td>
+                        <td>{{ employee.LastName}}</td>
+                        <td>{{ employee.Birthdate |date}}</td>
+                        <td>{{ employee.JobPosition }}</td>
+                        <td>{{ employee.Department }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" (click)='delete(employee)'>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </button>
+                                <button type="button" class="btn btn-default" [routerLink]="['/employees',employee.Id,'edit']"
+                                 [queryParams]="{filterby:listFilter}" >
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="fixed-action-btn">
+            <a [routerLink]="['/employees',0,'edit']" [queryParams]="{filterby:listFilter}" class="btn-floating btn-large blue waves-effect waves-light ">
+                <i class="large material-icons">add</i>
+            </a>
+        </div>
+    </div>
+</div>

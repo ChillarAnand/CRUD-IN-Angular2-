@@ -1,0 +1,32 @@
+{
+  "Welcome": {
+    "Title": "ಸ್ವಾಗತ",
+    "Developer": "ಅಭಿವೃದ್ಧಿಪಡಿಸಲಾಗಿದೆ:"
+  },
+  "App": {
+    "Home": "ಮುಖಪುಟ",
+    "List": "ನೌಕರರ ಪಟ್ಟಿ"
+  },
+  "EmployeeList": {
+    "Title": "ನೌಕರರ ಪಟ್ಟಿ",
+    "FirstName": "ಮೊದಲ ಹೆಸರು",
+    "LastName": "ಕೊನೆಯ ಹೆಸರು",
+    "Birthdate": "ಹುಟ್ಟಿದ ದಿನಾಂಕ",
+    "JobPosition": "ನೌಕರಿಯ ದರ್ಜೆ",
+    "Department": "ಇಲಾಖೆ",
+    "Operations": "ಕಾರ್ಯಾಚರಣೆ"
+  },
+  "EmployeeDetails": {
+    "Title": "ಉದ್ಯೋಗಿ ವಿವರಗಳು",
+    "Back":"ಹಿಂದೆ"
+  },
+  "EmployeeEdit":{
+    "Save":"ಉಳಿಸಿ",
+    "Cancel":"ರದ್ದುಮಾಡಿ",
+    "FirstNamePlaceHolder":"ನಿಮ್ಮ ಮೊದಲ ಹೆಸರು",
+    "LastNamePlaceHolder":"ನಿಮ್ಮ ಕೊನೆಯ ಹೆಸರು",
+    "BirthdatePlaceHolder": "ನಿಮ್ಮ ಹುಟ್ಟಿದ ದಿನಾಂಕ",
+    "JobPositionPlaceHolder": "ನಿಮ್ಮ ಉದ್ಯೋಗ ಸ್ಥಾನ",
+    "DepartmentPlaceHolder": "ನಿಮ್ಮ ಇಲಾಖೆ"
+  }
+}

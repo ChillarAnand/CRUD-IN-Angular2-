@@ -1,0 +1,32 @@
+{
+  "Welcome": {
+    "Title": "స్వాగతం",
+    "Developer": "అభివృద్ధి చెందింది:"
+  },
+  "App": {
+    "Home": "హోమ్",
+    "List": "ఉద్యోగుల జాబితా"
+  },
+  "EmployeeList": {
+    "Title": "ఉద్యోగుల జాబితా",
+    "FirstName": "మొదటి పేరు",
+    "LastName": "చివరి పేరు",
+    "Birthdate": "పుట్టిన తేదీ",
+    "JobPosition": "ఉద్యోగ స్థానం",
+    "Department": "శాఖ",
+    "Operations": "ఆపరేషన్స్"
+  },
+  "EmployeeDetails": {
+    "Title": "ఉద్యోగి వివరాలు",
+    "Back":"తిరిగి"
+  },
+  "EmployeeEdit":{
+    "Save":"సేవ్",
+    "Cancel":"రద్దు",
+    "FirstNamePlaceHolder":"మీ మొదటి పేరు",
+    "LastNamePlaceHolder":"నీ చివరి పేరు",
+    "BirthdatePlaceHolder": "మీ పుట్టిన తేదీ",
+    "JobPositionPlaceHolder": "మీ ఉద్యోగ స్థానం",
+    "DepartmentPlaceHolder": "మీ శాఖ"
+  }
+}
