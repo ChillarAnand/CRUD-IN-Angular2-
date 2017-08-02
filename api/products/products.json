@@ -1,52 +1,8 @@
-[
-    {
-        "productId": 1,
-        "productName": "Leaf Rake",
-        "productCode": "GDN-0011",
-        "releaseDate": "March 19, 2016",
-        "description": "Leaf rake with 48-inch wooden handle.",
-        "price": 19.95,
-        "starRating": 3.2,
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-    },
-    {
-        "productId": 2,
-        "productName": "Garden Cart",
-        "productCode": "GDN-0023",
-        "releaseDate": "March 18, 2016",
-        "description": "15 gallon capacity rolling garden cart",
-        "price": 32.99,
-        "starRating": 4.2,
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-    },
-    {
-        "productId": 5,
-        "productName": "Hammer",
-        "productCode": "TBX-0048",
-        "releaseDate": "May 21, 2016",
-        "description": "Curved claw steel hammer",
-        "price": 8.9,
-        "starRating": 4.8,
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-    },
-    {
-        "productId": 8,
-        "productName": "Saw",
-        "productCode": "TBX-0022",
-        "releaseDate": "May 15, 2016",
-        "description": "15-inch steel blade hand saw",
-        "price": 11.55,
-        "starRating": 3.7,
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
-    },
-    {
-        "productId": 10,
-        "productName": "Video Game Controller",
-        "productCode": "GMG-0042",
-        "releaseDate": "October 15, 2015",
-        "description": "Standard two-button video game controller",
-        "price": 35.95,
-        "starRating": 4.6,
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
-    }
-]
+{
+    "access_token": "I8PWWpg2gmp4iiseWRQiyMMt3FB8n76qWqtHoCOaPlCHi6PjNQDjLSIdqfGSomyXErf94e2mUDNXfj4hCv0TL7vFIZzaKXyVChPAEIwljk6Nh5WeuDmhZ4giuaLQ825neLfFyUvwUfoNtdFbsceGqs81sBiD6dQB9UY7H6fU1gC_Oegf8n8Hk1aalnyu_4S5yPY6f8A4WGjXLQhOWgBHc29YCBykJbHlX8j1J2pdS01nZwJAiU68CDxWKecyNceWlkDjoBvtvLvN8F_6sOq1BmTDXcpl-fnwrfmc59u2iLG9fL4mt9nVTsB_9tGmkTyA-uJfc2WOk3jevTdsRK5hzrCHEsjp-fhtnagmoSWTWTg-HVIAcm1Tmk8ZHABcAm6YTsy8BDREUKGYDrmY8_estWSVZ1u_OnYynLC8PUI8XxlXgVHDMp8PgBJ830H2cWE9kYiYGm8OTylW6Z48L_1hb-C2FoRw1WSsyMFd7IExr0A",
+    "token_type": "bearer",
+    "expires_in": 1209599,
+    "userName": "ramu@gmail.com",
+    ".issued": "Wed, 02 Aug 2017 12:03:57 GMT",
+    ".expires": "Wed, 16 Aug 2017 12:03:57 GMT"
+}

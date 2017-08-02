@@ -13,16 +13,18 @@ export class LoginComponent {
     pageTitle = 'Log In';
 
     constructor(private authService: AuthService,
-                private router: Router) { }
+        private router: Router) { }
 
     login(loginForm: NgForm) {
         if (loginForm && loginForm.valid) {
             let userName = loginForm.form.value.userName;
             let password = loginForm.form.value.password;
-            this.authService.login(userName, password);
-
-            // Navigate to the Product List page after log in.
-            
+            this.authService.login(userName, password)
+                .subscribe(
+                res =>{
+                    
+                }
+                );
         } else {
             this.errorMessage = 'Please enter a user name and password.';
         };

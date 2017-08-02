@@ -10,34 +10,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
+require("rxjs/add/operator/do");
+require("rxjs/add/operator/catch");
 var message_service_1 = require("../messages/message.service");
 var AuthService = (function () {
-    function AuthService(messageService) {
+    function AuthService(messageService, http) {
         this.messageService = messageService;
+        this.http = http;
+        this.baseUrl = 'http://localhost:64038/Token';
+        this.headers = new http_1.Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
     }
-    AuthService.prototype.isLoggedIn = function () {
-        return !!this.currentUser;
-    };
     AuthService.prototype.login = function (userName, password) {
         if (!userName || !password) {
             this.messageService.addMessage('Please enter your userName and password');
             return;
         }
-        if (userName === 'admin') {
-            this.currentUser = {
-                id: 1,
-                userName: userName,
-                isAdmin: true
+        var body = new http_1.URLSearchParams();
+        body.set('username', userName);
+        body.set('password', password);
+        body.set('grant_type', 'password');
+        return this.http.post(this.baseUrl, body, this.headers)
+            .map(function (res) {
+            return {
+                token: res.json().access_token,
+                username: res.json().userName
             };
-            this.messageService.addMessage('Admin login');
-            return;
-        }
-        this.currentUser = {
-            id: 2,
-            userName: userName,
-            isAdmin: false
-        };
-        this.messageService.addMessage("User: " + this.currentUser.userName + " logged in");
+        })
+            .do(function (x) { return console.log(JSON.stringify(x)); });
     };
     AuthService.prototype.logout = function () {
         this.currentUser = null;
@@ -46,7 +47,7 @@ var AuthService = (function () {
 }());
 AuthService = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [message_service_1.MessageService])
+    __metadata("design:paramtypes", [message_service_1.MessageService, http_1.Http])
 ], AuthService);
 exports.AuthService = AuthService;
 //# sourceMappingURL=auth.service.js.map

@@ -22,8 +22,9 @@ var LoginComponent = (function () {
         if (loginForm && loginForm.valid) {
             var userName = loginForm.form.value.userName;
             var password = loginForm.form.value.password;
-            this.authService.login(userName, password);
-            // Navigate to the Product List page after log in.
+            this.authService.login(userName, password)
+                .subscribe(function (res) {
+            });
         }
         else {
             this.errorMessage = 'Please enter a user name and password.';

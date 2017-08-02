@@ -1,38 +1,39 @@
 import { Injectable } from '@angular/core';
+import { Http, Response, Headers, RequestOptions, URLSearchParams  } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/catch';
 
 import { IUser } from './user';
 import { MessageService } from '../messages/message.service';
 
 @Injectable()
 export class AuthService {
+    token: string;
+    private baseUrl: string = 'http://localhost:64038/Token';
+    private headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' })
     currentUser: IUser;
 
-    constructor(private messageService: MessageService) { }
+    constructor(private messageService: MessageService, private http: Http) { }
 
-    isLoggedIn(): boolean {
-        return !!this.currentUser;
-    }
-
-    login(userName: string, password: string): void {
+    login(userName: string, password: string) {
         if (!userName || !password) {
             this.messageService.addMessage('Please enter your userName and password');
             return;
         }
-        if (userName === 'admin') {
-            this.currentUser = {
-                id: 1,
-                userName: userName,
-                isAdmin: true
-            };
-            this.messageService.addMessage('Admin login');
-            return;
-        }
-        this.currentUser = {
-            id: 2,
-            userName: userName,
-            isAdmin: false
-        };
-        this.messageService.addMessage(`User: ${this.currentUser.userName} logged in`);
+        let body = new URLSearchParams();
+        body.set('username', userName);
+        body.set('password', password);
+        body.set('grant_type', 'password');
+        return this.http.post(this.baseUrl, body, this.headers)
+            .map(res => {
+                return {
+                    token: res.json().access_token,
+                    username: res.json().userName
+                }
+            })
+            .do(x => console.log(JSON.stringify(x)))
     }
 
     logout(): void {
